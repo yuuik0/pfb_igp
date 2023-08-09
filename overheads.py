@@ -1,18 +1,21 @@
 import csv
 from pathlib import Path
-fp = Path.cwd()/"csv_reports"/"overheads.csv"
+fp = Path.cwd()/"csv_reports"/"overheads.csv" #defines the file path to the cvs report
 # print(fp.exists())
 
-with fp.open(mode="r", encoding= "UTF-8", newline= "") as file:
-    reader = csv.reader(file)
-    next(reader)
+#create an object named "reader" to read the csv file if the path exists
+with fp.open(mode="r", encoding= "UTF-8", newline= "") as file: 
+    reader = csv.reader(file) # created object named "reader"
+    next(reader) #skips the header row
 
     expenseRecords = []
 
     for row in reader:
+        # appends the respective rows from the overheads csv to into the expenseRecords
         expenseRecords.append([row[0], row[1], row[3]])
 # print(expenseRecords)
 
+# creates a list of unique days from expenseRecords
 day = []
 for item in expenseRecords:
     if item[0] not in day:
