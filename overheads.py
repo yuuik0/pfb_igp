@@ -73,14 +73,17 @@ def overhead_function(expense_categories):
         "Interest Expense ": 0,
         "Penalty Expense": 0,
     }
-    for item in expenseRecords:
-        expense_categories[item[1]] += int(item[2])
-    highest_expenseCategory = None
-    highest_amount = 0
-    for expense, amount in expense_categories.items():
-        if amount > highest_amount:
+    for item in expenseRecords: 
+        expense_categories[item[1]] += int(item[2]) #sums the items from the dictionary called "expense_categories"
+    highest_expenseCategory = None # Initialise variables to track the highest expense category
+    highest_amount = 0 #creates variable assigns it with the value 0
+    for expense, amount in expense_categories.items(): 
+        if amount > highest_amount: # Check if the current amount is greater than the highest_amount
+            # If the conditioon is met from the dictionary, it will be updated into variable 
             highest_expenseCategory = expense
+            # If the condition is met, update the amount
             highest_amount = amount
+     #retruns what is the highest expense category and the expense in percantage 
     return f"[HIGHEST OVERHEAD] {str(highest_expenseCategory).upper()}: {round(highest_amount/ total_expense(expenseRecords) * 100, 2)}%\n"
 
 print(overhead_function(expense_categories))
