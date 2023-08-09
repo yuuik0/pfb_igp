@@ -78,7 +78,7 @@ def coh_function():
     previous_cash = None
     daily_diff = {}
 
-    #iterates through the reversed _daily_cash dictionary
+    #iterates through the reversed_daily_cash dictionary
     for day, cash in reversed_daily_cash.items():
         if previous_cash is not None:
             diff = cash - previous_cash
@@ -99,11 +99,11 @@ def coh_function():
     if cash_surplus:
         result += f"[CASH SURPLUS] CASH ON EACH DAY IS HIGHER THAN THE PREVIOUS DAY\n"
         result += f"[HIGHEST CASH SURPLUS] DAY: {day_with_highest_surplus}, AMOUNT: USD{highest_surplus}"
-    # if there was a cash deficit, the code would iterate through the amounts in the deficits and print the day as well as the deficit amount out.
+    # if there was a cash deficit, the code would iterate through the amounts in the deficits dictionary and print the day as well as the deficit amount out.
     else:
         for day, deficit in deficits.items():
             result += f"[CASH DEFICIT] DAY: {day}, AMOUNT: USD{deficit}\n"
     return result
 
-#call for the function and print the result
+#call for the function and prints the results
 print(coh_function())

@@ -16,12 +16,12 @@ with fp.open(mode="r", encoding= "UTF-8", newline= "") as file:
 # print(expenseRecords)
 
 # creates a list of unique days from expenseRecords
-day = [] # creates an empty list
+day_list = [] # creates an empty list
 for item in expenseRecords: 
-    # if item not in day, append item to day
-    if item[0] not in day:
-        day.append(item[0])
-# print(day)
+    # if day not in day_list, append day to day_list
+    if item[0] not in day_list:
+        day_list.append(item[0])
+# print(day_list)
 
 expense = [] #creates and empty list
 for item in expenseRecords:
