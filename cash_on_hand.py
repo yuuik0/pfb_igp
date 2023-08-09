@@ -1,21 +1,23 @@
 import csv
 from pathlib import Path
 
-fp = Path.cwd()/"csv_reports"/"cash_on_hand.csv"
+fp = Path.cwd()/"csv_reports"/"cash_on_hand.csv" #printing the file path of the csv
 # print(fp.exists())
 
+# create an object named 'reader' to print the line if the path exists
 with fp.open(mode="r", encoding= "UTF-8", newline= "") as file:
     reader = csv.reader(file)
     next(reader)
 
-    cashRecords = []
+    cashRecords = [] #create an empty list to store the information from the cash_on_hand csv
 
     for row in reader:
-        cashRecords.append([row[0], row[3]])
+        cashRecords.append([row[0], row[3]]) #appends the day and amount from each row in the cash_on_hand csv into the cashRecords list
 # print(cashRecords)
 
-day = []
+day = [] #create an empty list, day 
 for item in cashRecords:
+    #if day is not in day, append the value into the list
     if item[0] not in day:
         day.append(item[0])
 day.reverse()
