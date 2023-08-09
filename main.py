@@ -7,7 +7,7 @@ def main():
     - No parameter required
     - Imports, coordinates, and executes the functions from overheads, cash_on_hand, and profit_loss modules, returning the combined result of the functions as a string
     """
-    # the functions in each module are being called for in this main function
+    # the final functions in each module are being called into this main function
     overhead = overheads.overhead_function(expense_categories= {
     "Salary Expense": 0,
     "Marketing Expense": 0,
