@@ -15,13 +15,14 @@ with fp.open(mode="r", encoding= "UTF-8", newline= "") as file:
         cashRecords.append([row[0], row[3]]) #appends the day and amount from each row in the cash_on_hand csv into the cashRecords list
 # print(cashRecords)
 
-day = [] #create an empty list, day 
+# gets a list of unique days
+day_list = [] #create an empty list, day_list
 for item in cashRecords:
-    #if day is not in day, append the value into the list
-    if item[0] not in day:
-        day.append(item[0])
-day.reverse()
-# print(day)
+    #if day is not in day_list, append day into day_list
+    if item[0] not in day_list:
+        day_list.append(item[0])
+day_list.reverse() #changes the order of the numbers to go from smallest to largest
+# print(day_list)
 
 total_coh = 0
 for item in cashRecords:
