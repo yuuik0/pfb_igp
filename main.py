@@ -1,7 +1,7 @@
 import overheads, cash_on_hand, profit_loss
 
 def main():
-    o = overheads.overhead_function(expense_categories= {
+    overhead = overheads.overhead_function(expense_categories= {
     "Salary Expense": 0,
     "Marketing Expense": 0,
     "Shipping Expense": 0,
@@ -13,10 +13,10 @@ def main():
     "Interest Expense ": 0,
     "Penalty Expense": 0,
     })
-    c = cash_on_hand.coh_function()
-    p = profit_loss.profitloss_function()
+    coh = cash_on_hand.coh_function()
+    pnl = profit_loss.profitloss_function()
 
-    results = f"{o}{c}{p}"
+    results = f"{overhead}{coh}{pnl}"
     return results
 main()
 
