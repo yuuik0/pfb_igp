@@ -44,15 +44,23 @@ expense_categories = {
 }
 
 def total_expense(expenseRecords):
-    total_exp = 0
-    for item in expenseRecords:
-        expense_categories[item[1]] += int(item[2])
-        total_exp += int(item[2])
+    """
+    - calculates the total expense from each categories
+    - parameter required: expenseRecords (list of expenses through the days)
+    """
+    total_exp = 0 #creates variable and assigns it with the value 0
+    for item in expenseRecords: #iterates the items in cashRecords
+        expense_categories[item[1]] += int(item[2]) #calculates the expenses from the different categories
+        total_exp += int(item[2]) # calculates the total expenses by summing up the same categories of expenses together
 
-    return total_exp
+    return total_exp #returns the total expenses from the different categories
 total_expense(expenseRecords)
 
 def overhead_function(expense_categories):
+    """
+    - Finds out which expense category is the highest along with its percentage
+    - parameters required: expense_categories 
+    """
     expense_categories = {
         "Salary Expense": 0,
         "Marketing Expense": 0,
