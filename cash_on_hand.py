@@ -12,7 +12,8 @@ with fp.open(mode="r", encoding= "UTF-8", newline= "") as file:
     cashRecords = [] #create an empty list to store the information from the cash_on_hand csv
 
     for row in reader:
-        cashRecords.append([row[0], row[3]]) #appends the day and amount from each row in the cash_on_hand csv into the cashRecords list
+        cashRecords.append([row[0], row[3]]) 
+        #appends the day(row[0]) and amount(row[3]) from each row in the cash_on_hand csv into the cashRecords list
 # print(cashRecords)
 
 # gets a list of unique days
@@ -21,16 +22,19 @@ for item in cashRecords:
     #if day is not in day_list, append day into day_list
     if item[0] not in day_list:
         day_list.append(item[0])
-day_list.reverse() #changes the order of the numbers to go from smallest to largest
+day_list.reverse() #changes the order of the days in day_list to go from smallest to largest
 # print(day_list)
 
-total_coh = 0
-for item in cashRecords:
-    total_coh += int(item[1])
+# calculation of total cash on hand over 90 days
+total_coh = 0 # created a variable, total_coh and assigned it to the value 0
+for item in cashRecords: #now, the code will go through the items in the cashRecords 
+    total_coh += int(item[1]) 
+    # adds up all the values of the cash on hand amounts from the cashRecords list and adds it back to the variable to get the total cash on hand
 # print(total_coh)
 
+#calculates the daily amount of cash on hand
 def daily_coh(cashRecords):
-    daily_cash = {}
+    daily_cash = {} #creates an empty dictionary to store the daily cash earned
     for item in cashRecords:
         day = item[0]
         cash = int(item[1])
