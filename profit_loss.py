@@ -1,5 +1,7 @@
 import csv
 from pathlib import Path
+
+# define file paths for CSV reports
 # print(Path.cwd())
 fp = Path.cwd()/"csv_reports"/"profit-and-loss (days 0-30).csv"
 fp1 = Path.cwd()/"csv_reports"/"profit-and-loss (days 30-60).csv"
@@ -67,6 +69,12 @@ def daily_amounts(pnlRecords):
 daily_amounts(pnlRecords)
 
 def profitloss_function():
+    """
+    analyze daily net profits and generate a summary report
+
+    returns:
+        str: Summary report indicating net profit surplus or deficits.
+    """
     netProfit_surplus = True
     highest_surplus = 0
     day_with_highest_surplus = None
