@@ -51,7 +51,7 @@ def total_expense(expenseRecords):
     total_exp = 0 #creates variable and assigns it with the value 0
     for item in expenseRecords: #iterates the items in expenseRecords
         expense_categories[item[1]] += int(item[2]) #calculates the expenses from the different categories and adds them up per category
-        total_exp += int(item[2]) # calculates the total expenses by summing up all the amounts from every transaction
+        total_exp += int(item[2]) # calculates the total expenses by summing up all the amounts from every transaction in the csv file
 
     return total_exp #returns the total expenses from the different categories
 total_expense(expenseRecords)
