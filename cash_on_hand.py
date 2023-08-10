@@ -57,7 +57,7 @@ daily_cash = daily_coh(cashRecords)
 #created a dictionary to store the daily cash totals reversed
 reversed_daily_cash = {}
 previous_total = 0
-# the code will iterate through the daily_cash dictionary and list out the items in a reversed order
+# the code will iterate through the daily_cash dictionary and list out the items in a reversed order to make it chronological
 for day, cash in reversed(daily_cash.items()):
     previous_total += cash
     reversed_daily_cash[day] = previous_total

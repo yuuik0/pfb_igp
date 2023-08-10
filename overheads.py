@@ -86,7 +86,8 @@ def overhead_function(expense_categories):
             highest_expenseCategory = expense
             # If the condition is met, the amount from the value pair of the dictionary will be updated into the variable
             highest_amount = amount
-     #retruns the highest expense category, as well as the expense incurred in percentage over the total expenses 
+     #returns the highest expense category, as well as the expense incurred in percentage over the total expenses 
+     #used .upper() to capitalise the name of the expense category
     return f"[HIGHEST OVERHEAD] {str(highest_expenseCategory).upper()}: {round(highest_amount/ total_expense(expenseRecords) * 100, 2)}%\n"
 
 print(overhead_function(expense_categories))

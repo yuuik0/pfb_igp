@@ -23,7 +23,7 @@ with fp.open(mode="r", encoding= "UTF-8", newline= "") as file:
     # Iterate through the rows in the CSV and appends the relevant columns
     for row in reader:
         pnlRecords.append([row[0], row[1], row[2], row[3], row[4]])
-        
+
 # read data from fp1 [days 30-60]
 with fp1.open(mode="r", encoding= "UTF-8", newline= "") as file:
     reader = csv.reader(file)
@@ -99,7 +99,7 @@ def profitloss_function():
           # check if the difference is deficit or surplus
             if diff < 0:
                 netProfit_surplus = False
-                deficits[day] = -diff #makes the negative difference in amount positive
+                deficits[day] = -diff # makes the negative difference in amount positive
             elif diff > highest_surplus:
                 highest_surplus = diff
                 day_with_highest_surplus = day
