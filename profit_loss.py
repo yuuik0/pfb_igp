@@ -48,6 +48,10 @@ for item in pnlRecords:
 
 daily_amt = {} 
 def daily_amounts(pnlRecords):
+    """
+    - Parameter required: pnlRecords (list containing the days and net profit per transaction)
+    - calculates the daily amount of net profit
+    """
     # Calculate daily net profits and store them in the daily_amt dictionary 
     for item in pnlRecords:
         day = item[0] 
@@ -70,10 +74,8 @@ daily_amounts(pnlRecords)
 
 def profitloss_function():
     """
-    analyze daily net profits and generate a summary report
-
-    returns:
-        str: Summary report indicating net profit surplus or deficits.
+    - Parameter required: None 
+    - Analyses profit and loss, showing if there is a deficit or surplus of the net profit
     """
     netProfit_surplus = True
     highest_surplus = 0

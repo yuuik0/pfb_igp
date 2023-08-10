@@ -34,7 +34,7 @@ for item in cashRecords: #now, the code will iterate through the items in the ca
 
 def daily_coh(cashRecords):
     """
-    - one parameter required; cashRecords (list containing of the days and amount of cash per transaction)
+    - Parameter required: cashRecords (list containing the days and amount of cash per transaction)
     - calculates the daily amount of cash on hand
     """
     daily_cash = {} #creates an empty dictionary to store the daily cash earned
@@ -67,7 +67,7 @@ for day, cash in reversed(daily_cash.items()):
 
 def coh_function():
     """
-    - No parameters required
+    - Parameters required: None
     - Analyses cash flow, showing if there is a deficit or surplus of the cash on hand
     """
     cash_surplus = True
