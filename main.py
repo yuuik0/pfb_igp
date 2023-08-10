@@ -30,12 +30,11 @@ def main():
 main()
 
 from pathlib import Path 
-
 # Writes the calculated info to the summary_report.txt file.
 home = Path.home() 
 # print(home) #shows the home directory of my laptop
 file_path = home/"OneDrive"/"project_group"/"summary_report.txt"
-file_path.touch() #creating summary_report.txt file if it doesnt exist
+file_path.touch() #creating summary_report.txt file if it doesnt exist in the computer yet
 # print(file_path)
 # print(file_path.exists()) #checking that the file exists in the computer
 

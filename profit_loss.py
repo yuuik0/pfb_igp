@@ -17,22 +17,27 @@ pnlRecords = []
 
 # read data from the first CSV file (fp) [day 0-30]
 with fp.open(mode="r", encoding= "UTF-8", newline= "") as file:
-    reader = csv.reader(file)
-    next(reader)
+    reader = csv.reader(file) #created object named "reader"
+    next(reader) #skips the header row
+
     # Iterate through the rows in the CSV and appends the relevant columns
     for row in reader:
         pnlRecords.append([row[0], row[1], row[2], row[3], row[4]])
+        
 # read data from fp1 [days 30-60]
 with fp1.open(mode="r", encoding= "UTF-8", newline= "") as file:
     reader = csv.reader(file)
     next(reader)
+
     # Iterate through the rows in the CSV and appends the relevant columns
     for row in reader:
         pnlRecords.append([row[0], row[1], row[2], row[3], row[4]])
+
 # read data from fp2 [days 60-90]
 with fp2.open(mode="r", encoding= "UTF-8", newline= "") as file:
     reader = csv.reader(file)
     next(reader)
+
     # Iterate through the rows in the CSV and appends the relevant columns
     for row in reader:
         pnlRecords.append([row[0], row[1], row[2], row[3], row[4]])

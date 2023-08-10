@@ -5,7 +5,7 @@ fp = Path.cwd()/"csv_reports"/"overheads.csv" #defines the file path to the csv 
 
 #create an object named "reader" to read the csv file if the path exists
 with fp.open(mode="r", encoding= "UTF-8", newline= "") as file: 
-    reader = csv.reader(file) # created object named "reader"
+    reader = csv.reader(file) #created object named "reader"
     next(reader) #skips the header row
 
     expenseRecords = []
@@ -30,6 +30,8 @@ for item in expenseRecords:
         expense.append(item[1])
 # print(expense)
 
+# created a dictionary known as expense_categories to store the amount of expenses incurred based on the category
+# key/value pair of expense name/ amount incurred
 expense_categories = {
     "Salary Expense": 0,
     "Marketing Expense": 0,
