@@ -1,9 +1,9 @@
 import csv
 from pathlib import Path
 # print(Path.cwd())
-fp = Path.cwd()/"csv_reports"/"profit-and-loss-usd.csv"
-fp1 = Path.cwd()/"csv_reports"/"profit-and-loss-usd (1).csv"
-fp2 = Path.cwd()/"csv_reports"/"profit-and-loss-usd (2).csv"
+fp = Path.cwd()/"csv_reports"/"profit-and-loss (days 0-30).csv"
+fp1 = Path.cwd()/"csv_reports"/"profit-and-loss (days 30-60).csv"
+fp2 = Path.cwd()/"csv_reports"/"profit-and-loss (days 60-90).csv"
 
 
 # print(fp.exists())
